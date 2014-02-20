@@ -1,5 +1,6 @@
 # Pastry - The pastebin from Space
 ![Demo picture](http://i.imgur.com/scdtHSY.png)
+![Demo picture](http://i.imgur.com/m1kEC1r.png)
 
 ### Hightlights
 
