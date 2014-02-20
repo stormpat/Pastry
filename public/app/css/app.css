@@ -67,6 +67,7 @@ textarea::-moz-selection {
 }
 .zoom {
     font-size: 1.5em !important;
+    transition: all 0.1s ease;
 }
 .hidden {
     display: none;

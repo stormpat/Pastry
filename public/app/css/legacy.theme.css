@@ -1,4 +1,3 @@
-
 /*
  * Legacy
  * Prettify CSS Theme.
@@ -8,19 +7,16 @@
 
 pre.theme-legacy {
   background-color: #14191f;
-  padding: 2em;
+  padding: 5em 0 0 5em;
   font-size:.7em;
   color: #aec2e0;
 }
-
 pre.theme-legacy code {
   font-family: 'Source Code Pro', Monaco, Consolas, "Lucida Console", monospace;
 }
-
 pre.theme-legacy .pln {
   color: #aec2e0;
 }
-
 pre.theme-legacy .str {
   color: #FF410D;
 }
