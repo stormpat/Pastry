@@ -9,6 +9,8 @@
 - Runs out of the box (SQLite as default)
 - Laravel based, so alot of db options to choose from. (+ easy to extend)
 
+### [Demo](paste.patrikstorm.com) (offline atm.)
+
 ### Installation
 
 @todo
