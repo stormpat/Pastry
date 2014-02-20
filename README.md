@@ -5,7 +5,7 @@
 
 - A SPA (Single page application) so its quite snappy!
 - Supports forking, zooming, trashing and favoriting (not yet implemented)
-- No configuration needed. Fork and your all set.
+- No configuration needed. Fork, Install and your all set.
 - Laravel based, so alot of db options to choose from. (+ easy to extend)
 
 ### Installation
@@ -22,6 +22,7 @@
 
 - Alot of cleanup on both Server & Client -side.
 - Sanitize input
+- Line numbers to the code editor.
 - Additional functionality (user accounts etc.)
 - Tests
 
@@ -31,9 +32,9 @@ I wanted to create a pastebin that resembled my own text editor. So i tried to m
 the colors, fonts and the UI theme. The style should be minimalistic, and the app
 shoud be a SPA. This project is a weekend thing, so dont be suprised if theres code smell.
 
-- **Laravel.io** - This project includes some stuff from the fine & techically superior Pastebin.
-- **Dayle Rees** - The prettify css theme is Dayle Reese's "Legacy" the same I use on my ST3.
-- **Gadzhi Kharkharov** - For the fine UI design (SpaceGrey).
+- **Laravel.io** - This project includes some stuff from the fine & techically superior [Pastebin](http://laravel.io/bin).
+- **Dayle Rees** - The prettify css theme is Dayle Reese's [Legacy](http://daylerees.github.io/), the same I use on my ST3.
+- **Gadzhi Kharkharov** - For the fine UI design on [SpaceGrey](http://kkga.github.io/spacegray/) for SublimeText.
 
 ### Licence
 
