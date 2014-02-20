@@ -1,0 +1,59 @@
+
+/*
+ * Legacy
+ * Prettify CSS Theme.
+ *
+ * Copyright (c) 2014 Dayle Rees
+ */
+
+pre.theme-legacy {
+  background-color: #14191f;
+  padding: 2em;
+  font-size:.7em;
+  color: #aec2e0;
+}
+
+pre.theme-legacy code {
+  font-family: 'Source Code Pro', Monaco, Consolas, "Lucida Console", monospace;
+}
+
+pre.theme-legacy .pln {
+  color: #aec2e0;
+}
+
+pre.theme-legacy .str {
+  color: #FF410D;
+}
+pre.theme-legacy .kwd {
+  color: #267fb5;
+}
+pre.theme-legacy .com {
+  color: #324357;
+}
+pre.theme-legacy .typ {
+  color: #ffffff;
+}
+pre.theme-legacy .lit {
+  color: #FFB20D;
+}
+pre.theme-legacy .pun,
+pre.theme-legacy .opn,
+pre.theme-legacy .clo {
+  color: #aec2e0;
+}
+pre.theme-legacy .tag {
+  color: #267fb5;
+}
+pre.theme-legacy .atn {
+  color: #ffffff;
+}
+pre.theme-legacy .atv {
+  color: #FFB20D;
+}
+pre.theme-legacy .dec,
+pre.theme-legacy .var {
+  color: #FF410D;
+}
+pre.theme-legacy .fun {
+  color: #267fb5;
+}

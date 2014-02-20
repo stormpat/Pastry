@@ -20,6 +20,22 @@ li {
 a[disabled] {
    color: #ccc;
 }
+
+/* CODEMIRROR ??!?!?!?!?*/
+pre {
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+pre.prettyprint {
+    border: 0;
+}
+textarea {
+    /**display: none;**/
+}
+
+
 textarea {
     overflow: auto;
     vertical-align: top;

@@ -1,4 +1,7 @@
-var app = angular.module('Paste', ['ngRoute', 'ui.bootstrap']);
+var app = angular.module('Paste', [
+    'ngRoute',
+    'ui.bootstrap'
+]);
 
 app.config(['$routeProvider', function($routeProvider) {
 
@@ -42,7 +45,11 @@ app.controller('PasteCtrl', [
     $scope.paste = $routeParams.paste;
 
     var getCallback = function(data) {
-        $scope.paste = data;
+        //$scope.paste = data;
+        setTimeout(function() {
+            $scope.paste = data;
+            $scope.$apply();
+        }, 0);
     };
 
     var postCallback = function(data) {
@@ -84,5 +91,11 @@ app.directive('zoom', function () {
                 editor.toggleClass('zoom');
             });
         }
+    };
+});
+
+app.filter('pretty', function(){
+    return function(text) {
+        return prettyPrintOne(text);
     };
 });

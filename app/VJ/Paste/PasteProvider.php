@@ -26,10 +26,14 @@ class PasteProvider {
     public function save($data, $lastId)
     {
         $paste = new Paste;
-        $paste->code = $data;
+        $paste->code = $this->convert($data);
         $paste->hash = $this->hash->encrypt($lastId + 1);
         $paste->save();
         return Response::json(array('url' => $paste->hash, 'status' => 200));
+    }
+
+    public function convert($html) {
+        return html_entity_decode($html);
     }
 
 }

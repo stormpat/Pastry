@@ -9,6 +9,7 @@
 </head>
 <body>
     <div ng-view></div>
+    <script src="//google-code-prettify.googlecode.com/svn/loader/prettify.js"></script>
     {{ HTML::script('app/js/angular.js') }}
     {{ HTML::script('app/js/ui-bootstrap.js') }}
     {{ HTML::script('app/js/angular-route.js') }}

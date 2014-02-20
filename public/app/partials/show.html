@@ -13,5 +13,6 @@
             </div>
         </div>
         <textarea ng-model="paste[0].code" name="code" class="editor" id="paste-show" ng-disabled="dis"></textarea>
+        <pre ng-bind-html-unsafe="text|pretty">{{paste[0].code}}</pre>
     </form>
 </div>
