@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+         url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+         url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+body {
+    height: 100%;
+    background: #14191f;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a[disabled] {
+   color: #ccc;
+}
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+textarea::selection {
+    background: #ff410d;
+}
+textarea::-moz-selection {
+    background: #ff410d;
+}
+.editor {
+    width: 100%;
+    height: 100%;
+    line-height: 1.8em;
+    position: fixed;
+    padding: 2em;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    resize: none;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    outline: none;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.control-panel {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: #232830;
+    padding: 15px;
+    box-shadow: -2px 0 3px rgba(0,0,0,0.2);
+    -o-box-shadow: -2px 0 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: -2px 0 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: -2px 0 3px rgba(0,0,0,0.2);
+    border: 0;
+}
