@@ -29,7 +29,7 @@ class PasteProvider {
         $paste->code = $data;
         $paste->hash = $this->hash->encrypt($lastId + 1);
         $paste->save();
-        return Response::json(array('status.url' => $paste->hash, 'status' => 200));
+        return Response::json(array('url' => $paste->hash, 'status' => 200));
     }
 
 }

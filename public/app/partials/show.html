@@ -3,15 +3,15 @@
         <div class="control-panel">
             <div class="control-buttons btn-group">
                 <ul>
-                    <li><a href="/#/" class="btn" data-original-title="News"><span tooltip-placement="left" tooltip="{{TIPS.new}}" class="glyphicon glyphicon-plus"></span></a></li>
-                    <li><a ng-click="zoom()"  class="btn" data-original-title="Zoom"><span tooltip-placement="left" tooltip="{{TIPS.zoom}}" class="glyphicon glyphicon-eye-open"></span></a></li>
-                    <li><a disabled ng-click="trash()" class="btn" data-original-title="Trash"><span tooltip-placement="left" tooltip="{{TIPS.trash}}" class="glyphicon glyphicon-trash"></span></a></li>
+                    <li><a href="/#/" class="btn" data-original-title="New"><span tooltip-placement="left" tooltip="{{TIPS.new}}" class="glyphicon glyphicon-plus"></span></a></li>
+                    <li><a zoom class="btn" data-original-title="Zoom"><span tooltip-placement="left" tooltip="{{TIPS.zoom}}" class="glyphicon glyphicon-eye-open"></span></a></li>
+                    <li><a ng-disabled="dis" ng-click="trash()" class="btn" data-original-title="Trash"><span tooltip-placement="left" tooltip="{{TIPS.trash}}" class="glyphicon glyphicon-trash"></span></a></li>
                     <li><a ng-click="fork()" class="btn" data-original-title="Fork"><span tooltip-placement="left" tooltip="{{TIPS.fork}}" class="glyphicon glyphicon-retweet"></span></a></li>
                     <li><a ng-click="favorite()" class="btn" data-original-title="Favorite"><span tooltip-placement="left" tooltip="{{TIPS.favorite}}" class="glyphicon glyphicon-heart-empty"></span></a></li>
-                    <li><a disabled ng-click="submit()" class="btn" data-original-title="Save"><span tooltip-placement="left" tooltip="{{TIPS.submit}}" class="glyphicon glyphicon-ok"></span></a></li>
+                    <li><a ng-disabled="dis" ng-click="submit()" class="btn" data-original-title="Save"><span tooltip-placement="left" tooltip="{{TIPS.submit}}" class="glyphicon glyphicon-ok"></span></a></li>
                 </ul>
             </div>
         </div>
-        <textarea ng-model="paste[0].code" name="code" class="editor" id="paste-show" disabled></textarea>
+        <textarea ng-model="paste[0].code" name="code" class="editor" id="paste-show" ng-disabled="dis"></textarea>
     </form>
 </div>

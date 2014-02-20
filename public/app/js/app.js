@@ -6,7 +6,7 @@ app.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'app/partials/index.html',
         controller: 'PasteCtrl'
     });
-    $routeProvider.when('/paste/:paste', {
+    $routeProvider.when('/bin/:paste', {
         templateUrl: 'app/partials/show.html',
         controller: 'PasteCtrl'
     });
@@ -38,17 +38,16 @@ app.controller('PasteCtrl', [
         favorite: "Favorite the paste",
     };
 
-    //$scope.paste = '';
+    $scope.dis = true;
     $scope.paste = $routeParams.paste;
 
     var getCallback = function(data) {
         $scope.paste = data;
     };
 
-    var postCallback = function(data, status) {
+    var postCallback = function(data) {
         $scope.data = data;
-        console.log(status);
-        $location.path('/paste');
+        $location.path('/bin/' + data.url);
     };
 
     if ($scope.paste) {
@@ -62,20 +61,28 @@ app.controller('PasteCtrl', [
         }).success(postCallback);
     };
 
-
-
-
-
-
-
-
-    $scope.zoom = function() {
-        console.log('ZOOM IN');
-
+    $scope.fork = function() {
+        $scope.dis = false;
     };
 
     $scope.trash = function() {
         $scope.paste = '';
     };
 
+    $scope.favorite = function() {
+        console.log('The favorite method is not yet implemented. Needs more server-side stuff :)');
+    };
+
 }]);
+
+app.directive('zoom', function () {
+    return {
+        restrict : 'A',
+        link: function(scope, element) {
+                element.bind("click", function(e) {
+                var editor = angular.element(angular.element(document.querySelector('.editor')));
+                editor.toggleClass('zoom');
+            });
+        }
+    };
+});
