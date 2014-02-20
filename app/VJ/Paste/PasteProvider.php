@@ -33,6 +33,10 @@ class PasteProvider {
     }
 
     public function convert($html) {
+        if (is_array($html))
+        {
+            $html = $html[0]['code'];
+        }
         return html_entity_decode($html);
     }
 

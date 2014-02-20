@@ -12,15 +12,15 @@ class DatabaseSeeder extends Seeder {
 		Eloquent::unguard();
 
 		VJ\Paste\Models\Paste::create(array(
-			'code' => '<?php echo \"Hello\"',
+			'code' => '<?php echo "Hello World";',
 			'hash' => 'h56',
 			'created_at' => new DateTime,
 			'updated_at' => new DateTime
 		));
 
 		VJ\Paste\Models\User::create(array(
-			'username' => 'stormpat',
-			'password' => 'kommari',
+			'username' => 'username',
+			'password' => 'password',
 			'created_at' => new DateTime,
 			'updated_at' => new DateTime
 		));

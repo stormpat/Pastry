@@ -12,7 +12,7 @@
                 </ul>
             </div>
         </div>
-        <textarea ng-model="paste[0].code" name="code" class="editor" id="paste-show" ng-disabled="dis"></textarea>
-        <pre ng-bind-html-unsafe="text|pretty">{{paste[0].code}}</pre>
+        <textarea ng-model="paste[0].code" name="code" class="editor" id="paste-show" ng-class="prew ? 'hidden' : 'shown'" ng-disabled="dis"></textarea>
+        <pre id="previewer" class="theme-legacy" ng-bind-html="paste[0].code|pretty" ng-class="codeprew ? 'hidden' : 'shown'"></pre>
     </form>
 </div>

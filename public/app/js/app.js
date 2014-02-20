@@ -1,5 +1,6 @@
 var app = angular.module('Paste', [
     'ngRoute',
+    'ngSanitize',
     'ui.bootstrap'
 ]);
 
@@ -41,11 +42,17 @@ app.controller('PasteCtrl', [
         favorite: "Favorite the paste",
     };
 
+    $scope.toType = function(obj) {
+        return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
+    }
+
     $scope.dis = true;
+    $scope.prew = false;
+    $scope.codeprew = false;
+
     $scope.paste = $routeParams.paste;
 
     var getCallback = function(data) {
-        //$scope.paste = data;
         setTimeout(function() {
             $scope.paste = data;
             $scope.$apply();
@@ -58,6 +65,7 @@ app.controller('PasteCtrl', [
     };
 
     if ($scope.paste) {
+        $scope.prew = true;
         $http.get('/paste/' + $scope.paste).success(getCallback);
     }
 
@@ -70,6 +78,8 @@ app.controller('PasteCtrl', [
 
     $scope.fork = function() {
         $scope.dis = false;
+        $scope.codeprew = true;
+        $scope.prew = false;
     };
 
     $scope.trash = function() {
@@ -87,14 +97,14 @@ app.directive('zoom', function () {
         restrict : 'A',
         link: function(scope, element) {
                 element.bind("click", function(e) {
-                var editor = angular.element(angular.element(document.querySelector('.editor')));
-                editor.toggleClass('zoom');
+                var zoomItem = angular.element(angular.element(document.querySelectorAll('.editor, #previewer')));
+                zoomItem.toggleClass('zoom');
             });
         }
     };
 });
 
-app.filter('pretty', function(){
+app.filter('pretty', function() {
     return function(text) {
         return prettyPrintOne(text);
     };
