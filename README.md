@@ -6,6 +6,7 @@
 - A SPA (Single page application) so its quite snappy!
 - Supports forking, zooming, trashing and favoriting (not yet implemented)
 - No configuration needed. Fork, Install and your all set.
+- Runs out of the box (SQLite as default)
 - Laravel based, so alot of db options to choose from. (+ easy to extend)
 
 ### Installation
