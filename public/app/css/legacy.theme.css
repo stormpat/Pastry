@@ -10,6 +10,7 @@ pre.theme-legacy {
   padding: 5em 0 0 5em;
   font-size: .9em;
   color: #aec2e0;
+  margin: 0 7% 0 0;
 }
 pre.theme-legacy code {
   font-family: 'Source Code Pro', Monaco, Consolas, "Lucida Console", monospace;
