@@ -10,3 +10,5 @@ Thumbs.db
 app/database/pastebin.db
 
 *.db
+
+app/database/pastebin.db
