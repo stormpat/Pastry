@@ -12,8 +12,9 @@
                 </ul>
             </div>
         </div>
-        <textarea ng-model="paste[0].code" name="code" class="editor" id="paste-show" ng-class="prew ? 'hidden' : 'shown'" ng-disabled="dis"></textarea>
-        <pre selected class="linenums theme-legacy" id="previewer" ng-bind-html="paste[0].code|pretty|unsafe" ng-class="codeprew ? 'hidden' : 'shown'">
-        </pre>
+        <textarea ng-model="paste" name="code" class="editor" id="paste-show" ng-class="prew ? 'hidden' : 'shown'" ng-disabled="dis"></textarea>
+        <pre selected class="linenums theme-legacy" id="previewer" ng-bind-html="paste|pretty" ng-class="codeprew ? 'hidden' : 'shown'">{{paste}}</pre>
+        <!-- I GOT THIS WRONG, WA CANNOT USE THE SANITIZE. IT ONLY DOES "HTML" STUFF SO PHP is out of the Question -->
+
     </form>
 </div>

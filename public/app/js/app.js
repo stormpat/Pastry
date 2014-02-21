@@ -25,12 +25,14 @@ app.controller('PasteCtrl', [
         '$http',
         '$location',
         '$routeParams',
+        '$sce',
         'CSRF_TOKEN',
     function(
         $scope,
         $http,
         $location,
         $routeParams,
+        $sce,
         CSRF_TOKEN) {
 
     $scope.TIPS = {
@@ -45,12 +47,11 @@ app.controller('PasteCtrl', [
     $scope.dis = true;
     $scope.prew = false;
     $scope.codeprew = false;
-
     $scope.paste = $routeParams.paste;
 
     var getCallback = function(data) {
         setTimeout(function() {
-            $scope.paste = data;
+            $scope.paste = data[0].code;
             $scope.$apply();
         }, 0);
     };
@@ -106,8 +107,8 @@ app.directive('selected', function () {
         link: function(scope, element) {
             element.bind("click", function(e) {
                 var row = angular.element(angular.element(document.querySelectorAll('ol')));
-                console.log(element);
-                console.log(row);
+                // console.log(element);
+                // console.log(row);
             });
         }
     };
@@ -118,10 +119,3 @@ app.filter('pretty', function() {
         return prettyPrintOne(text, '', true);
     };
 });
-
-app.filter('unsafe', function($sce) {
-    return function(val) {
-        return $sce.trustAsHtml(val);
-    };
-});
-
