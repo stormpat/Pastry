@@ -1,6 +1,7 @@
-# Pastry - The pastebin from Space
-![Demo picture](http://i.imgur.com/scdtHSY.png)
-![Demo picture](http://i.imgur.com/m1kEC1r.png)
+# Pastry
+### - The pastebin that doesn't look like a wastebin.
+
+![Demo picture](http://i.imgur.com/MxYi0xj.png)
 
 ### Hightlights
 
