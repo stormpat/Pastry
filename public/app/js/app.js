@@ -42,10 +42,6 @@ app.controller('PasteCtrl', [
         favorite: "Favorite the paste",
     };
 
-    $scope.toType = function(obj) {
-        return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
-    }
-
     $scope.dis = true;
     $scope.prew = false;
     $scope.codeprew = false;
@@ -94,7 +90,7 @@ app.controller('PasteCtrl', [
 
 app.directive('zoom', function () {
     return {
-        restrict : 'A',
+        restrict: 'A',
         link: function(scope, element) {
                 element.bind("click", function(e) {
                 var zoomItem = angular.element(angular.element(document.querySelectorAll('.editor, #previewer')));

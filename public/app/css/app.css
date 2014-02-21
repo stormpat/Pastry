@@ -24,6 +24,8 @@ a[disabled] {
 pre {
     border: 0;
     padding: 0;
+    background: transparent; /* fix for weird code */
+    font-family: 'Source Code Pro', Monaco, Consolas, "Lucida Console", monospace;
 }
 textarea {
     overflow: auto;
@@ -45,7 +47,7 @@ textarea::-moz-selection {
     border: 0;
     color: #fff;
     resize: none;
-    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    font-family: 'Source Code Pro', Monaco, Consolas, "Lucida Console", monospace;
     outline: none;
     font-size: 12px;
     -webkit-font-smoothing: antialiased;

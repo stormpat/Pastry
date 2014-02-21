@@ -10,12 +10,13 @@
 </head>
 <body>
     <div ng-view></div>
-    <script src="//google-code-prettify.googlecode.com/svn/loader/prettify.js"></script>
+    {{ HTML::script('app/js/prettify.js') }}
     {{ HTML::script('app/js/angular.js') }}
     {{ HTML::script('app/js/ui-bootstrap.js') }}
     {{ HTML::script('app/js/angular-route.js') }}
     {{ HTML::script('app/js/angular-sanitize.js') }}
     {{ HTML::script('app/js/app.js') }}
     <script>angular.module("Paste").constant("CSRF_TOKEN", '<?php echo csrf_token(); ?>');</script>
+
 </body>
 </html>

@@ -32,12 +32,21 @@ class PasteProvider {
         return Response::json(array('url' => $paste->hash, 'status' => 200));
     }
 
-    public function convert($html) {
+    /**
+     * In case of a fork, the data will be diffrent than from a normal
+     * paste (from scratch). So in case of the data being an Array, we just
+     * grab the correct slice of the pie.
+     *
+     * @param mixed $html String/Array of pasted code.
+     * @return string String containing the code part.
+     */
+    public function convert($html)
+    {
         if (is_array($html))
         {
             $html = $html[0]['code'];
         }
-        return html_entity_decode($html);
+        return $html;
     }
 
 }
