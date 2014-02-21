@@ -1,6 +1,6 @@
 <?php
 
-use VJ\Paste\PasteProvider;
+use Pastry\Paste\PasteProvider;
 
 class PasteController extends BaseController {
 

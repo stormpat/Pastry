@@ -1,4 +1,4 @@
-<?php namespace VJ\Paste\Models;
+<?php namespace Pastry\Paste\Models;
 
 use Eloquent;
 

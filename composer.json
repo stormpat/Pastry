@@ -16,7 +16,7 @@
 			"app/tests/TestCase.php"
 		],
 		"psr-0": {
-            "VJ": "app/"
+            "Pastry": "app/"
         }
 	},
 	"scripts": {

@@ -1,6 +1,6 @@
-<?php namespace VJ\Paste;
+<?php namespace Pastry\Paste;
 
-use VJ\Paste\Models\Paste;
+use Pastry\Paste\Models\Paste;
 use Hashids\Hashids;
 use Response;
 

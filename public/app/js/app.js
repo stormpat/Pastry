@@ -112,9 +112,16 @@ app.directive('selected', function () {
         }
     };
 });
+
 app.filter('pretty', function() {
     return function(text) {
         return prettyPrintOne(text, '', true);
+    };
+});
+
+app.filter('unsafe', function($sce) {
+    return function(val) {
+        return $sce.trustAsHtml(val);
     };
 });
 
