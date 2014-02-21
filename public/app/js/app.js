@@ -100,6 +100,18 @@ app.directive('zoom', function () {
     };
 });
 
+app.directive('selected', function () {
+    return {
+        restrict: 'A',
+        link: function(scope, element) {
+            element.bind("click", function(e) {
+                var row = angular.element(angular.element(document.querySelectorAll('ol')));
+                console.log(element);
+                console.log(row);
+            });
+        }
+    };
+});
 app.filter('pretty', function() {
     return function(text) {
         return prettyPrintOne(text, '', true);
