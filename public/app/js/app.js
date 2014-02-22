@@ -106,9 +106,10 @@ app.directive('selected', function () {
         restrict: 'A',
         link: function(scope, element) {
             element.bind("click", function(e) {
-                var row = angular.element(angular.element(document.querySelectorAll('ol')));
-                // console.log(element);
-                // console.log(row);
+            var row = e.toElement;
+                if (row.classList[0].charAt(0) === 'L') {
+                    row.classList.toggle('selected')
+                };
             });
         }
     };
