@@ -20,10 +20,20 @@ li {
 #previewer li {
     list-style: inherit;
 }
+scrollbar, ::-webkit-scrollbar {
+    width: 2px;
+    background: #232830;
+}
+scrollbar-track, ::-webkit-scrollbar-track {
+   background: #232830;
+}
+scrollbar-thumb, ::-webkit-scrollbar-thumb {
+    background-color: #428bca;
+    border-radius: 0%;
+}
 a[disabled] {
    color: #ccc;
 }
-
 pre {
     border: 0;
     padding: 0;
@@ -73,6 +83,9 @@ textarea::-moz-selection {
 .zoom {
     font-size: 1.5em !important;
     transition: all 0.1s ease;
+}
+.selected {
+    background: #232830;
 }
 .hidden {
     display: none;
