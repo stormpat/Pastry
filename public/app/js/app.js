@@ -4,7 +4,9 @@ var app = angular.module('Paste', [
     'ui.bootstrap'
 ]);
 
-app.config(['$routeProvider', function($routeProvider) {
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+
+    $locationProvider.html5Mode(false);
 
     $routeProvider.when('/', {
         templateUrl: 'app/partials/index.html',
@@ -48,6 +50,7 @@ app.controller('PasteCtrl', [
     $scope.prew = false;
     $scope.codeprew = false;
     $scope.paste = $routeParams.paste;
+
 
     var getCallback = function(data) {
         setTimeout(function() {
